@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :password_digest
       t.timestamps null: false
+      t.string :remember_digest
     end
     add_index :users, [:email]
      # add_index :statistics, [:name, :item_i]
