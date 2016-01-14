@@ -7,6 +7,9 @@ class CreateUsers < ActiveRecord::Migration
       t.timestamps null: false
       t.string :remember_digest
       t.boolean :admin, default: false
+      t.string :activation_digest
+      t.boolean :activated, default: false
+      t.datetime :activated_at
     end
     add_index :users, [:email]
      # add_index :statistics, [:name, :item_i]
