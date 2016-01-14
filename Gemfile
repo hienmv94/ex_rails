@@ -6,6 +6,13 @@ gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 gem 'bcrypt',               '3.1.7'
 
+# sample user
+gem 'faker',                '1.4.2'
+
+# paginate 
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 gem 'bootstrap-sass'
 
 gem 'sqlite3'
