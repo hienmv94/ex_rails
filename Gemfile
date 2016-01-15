@@ -6,7 +6,7 @@ gem 'rails', '4.2.5'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt',               '3.1.7'
-
+gem 'puma', '2.11.1'
 # sample user
 gem 'faker',                '1.4.2'
 
@@ -16,10 +16,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 
 gem 'bootstrap-sass'
 gem 'thread_safe', '~> 0.3.5'
-group :production do
-  gem "pg"
-  gem 'rails_12factor'
-end
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -46,6 +43,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+group :production do
+  gem "pg"
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
