@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20160112010536) do
     t.string   "activation_digest"
     t.boolean  "activated",         default: false
     t.string   "reset_digest"
+    t.datetime "reset_sent_at"
     t.datetime "activated_at"
   end
 
