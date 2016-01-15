@@ -47,16 +47,6 @@ Rails.application.configure do
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
   config.log_level = :debug
-
-  config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: "gmail.com",
-    authentication: "plain",
-    enable_starttls_auto: true,
-    :user_name            => "railsdemo2016@gmail.com",
-    :password             => 'mrhien1994'
-  }
   
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
@@ -90,4 +80,15 @@ Rails.application.configure do
   #config to mailer feature
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
+  host = 'ancient-woodland-7900.herokuapp.com'
+  config.action_mailer.default_url_options = { host: host }
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.gmail.com',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => 'railsdemo2016@gmail.com',
+    :password       => 'mrhien1994',
+    :domain         => 'heroku.com',
+    :enable_starttls_auto => true
+  }
 end
