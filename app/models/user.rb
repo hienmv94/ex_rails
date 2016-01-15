@@ -55,7 +55,7 @@ class User < ActiveRecord::Base
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
   end
-
+  
   private
     # Converts email to all lower-case.
     def downcase_email
